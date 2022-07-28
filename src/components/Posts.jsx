@@ -3,6 +3,8 @@ import ReactFilterTable from "react-filter-and-pagination-table";
 import axios from 'axios';
 import { PostCard } from './PostCard';
 import './Posts.css'
+import Loading from './Loading';
+
 
 function Posts() {
 
@@ -50,7 +52,7 @@ function Posts() {
 
     return (
       <div className="mt-2">
-        <div className="cat-text">Filter by Category:</div>
+        <div className="cat-text">Filter by Categories:</div>
         <div>
           <select
             className="select1 mt-1"
@@ -66,12 +68,21 @@ function Posts() {
   }
 
   const showPosts = () => {
-    if (posts != null) {
-
-      return posts.slice(0, paginate).map((post) => <PostCard data={post} />);
-
+    if (posts.length > 0 ) {
+      if (!selectedCategory) {
+        return posts.slice(0, paginate).map((post) => <PostCard data={post} />);
+      }else {
+      
+      return  posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).slice(0, paginate).map((post) => <PostCard data={post} />);
+      }
+       
     } else {
-
+      
+      if(loading){
+        return( 
+        <Loading/>
+        );
+      }
       if (error) {
         return <p>{error}</p>;
       }
