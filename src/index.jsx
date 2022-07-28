@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 /**
  * This file can be ignored, please work in ./components/App.jsx
  */
