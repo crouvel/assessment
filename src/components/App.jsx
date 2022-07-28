@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Home';
-import Categories from './Categories';
+import Posts from './Posts';
 import {
   BrowserRouter,
   Routes,
@@ -18,15 +18,14 @@ function App() {
               <Link to="/" className="li-element"><p >Home</p></Link>
             </li>
             <li>
-              <Link to="/categories" className="li-element"><p >Categories</p></Link>
+              <Link to="/posts" className="li-element"><p >Posts</p></Link>
             </li>
           </ul>
         </nav>
         
     <Routes>
-    <Route path="/categories" element={<Categories />} />
+    <Route path="/posts" element={<Posts />} />
       <Route path="/" element={<Home />} />
-      {/* <Route path="invoices" element={<Invoices />} /> */}
     </Routes>
   </BrowserRouter>
 

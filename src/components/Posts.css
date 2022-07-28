@@ -1,0 +1,21 @@
+.select1 {
+    width: 200px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .cards1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  
+
+.cat-text{
+    font-weight: bold;
+    font-size: 30px;
+}
