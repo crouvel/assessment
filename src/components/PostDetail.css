@@ -1,6 +1,11 @@
 /* Button area */
-.btncontainer{
+.btncontainer {
     margin-left: 15px;
+}
+
+.warn {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    background-color: aquamarine;
 }
 
 .summary {
@@ -10,10 +15,11 @@
 /* Div that contains all the information*/
 .details {
     border-radius: 10px;
-    background: rgba(90, 240, 232, 0.685);
+    background: rgba(80, 198, 228, 0.836);
     padding-top: 10px;
     padding-bottom: 15px;
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
 }

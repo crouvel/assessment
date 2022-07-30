@@ -128,12 +128,16 @@ function Posts() {
 
   return (
     <>
-      <h1 className="text-center mt-4 mb-3 font-weight-bold font-italic">You can reach the posts here ...</h1>
-      <div className="text-center">
-        <div className="mt-2 mb-4">
+       <h1 className="text-center mt-4"><b>Posts</b></h1>
+      <h2 className="text-center mt-2 mb-5">You can reach the posts here ...</h2>
+      <div className="text-center mb-3">
+        <div className="mt-2 mb-3">
           {showSelected()}
         </div>
-        <button className="btn btn-success" onClick={load_more}>Load More</button>
+        <button className="btn load mt-2" onClick={load_more}>Load More</button>
+        {posts.length > 0 ?
+        <h4 className="mt-3"><b>{paginate} out of {selectedCategory? posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).length : posts.length }</b></h4> :
+        null}
       </div>
       <div className="cards">
         {

@@ -73,7 +73,8 @@ function PostDetail() {
                     <div className="details">
                         <div className="sub1">
                             <h2 className="text-center mt-4 font-italic"><b>{row[0].title}</b></h2>
-                            <h4 className="text-center mt-4 mw-20">{row[0].summary}</h4>
+                            <h3 className="text-center mt-5 font-italic"><b>Summary:</b></h3>
+                            <h4 className="text-center mw-20">{row[0].summary}</h4>
                         </div>
                         <div>
                             <h4 className="mt-3"></h4>
@@ -111,7 +112,7 @@ function PostDetail() {
         <>
             <div className="btncontainer">
                 <Link to="/posts">
-                    <button className="btn btn-info mt-3 pl-3" ><b>{"<< BACK TO POSTS"}</b></button>
+                    <button className="btn warn mt-3 pl-3" ><b>{"< BACK TO POSTS"}</b></button>
                 </Link>
             </div>
             {showDetails()}
