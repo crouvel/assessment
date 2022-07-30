@@ -1,7 +1,16 @@
+//Include style
 import './App.css';
+
+//Include Home Component
 import Home from './Home';
+
+//Include Posts Component
 import Posts from './Posts';
+
+//Include Post Detail Component
 import PostDetail from './PostDetail';
+
+//Include react-router-dom
 import {
   BrowserRouter,
   Routes,
@@ -12,6 +21,8 @@ import {
 
 function App() {
   return (
+     
+    //Navigation Bar with associated links
     <BrowserRouter>
       <nav className="NavbarItems">
         <ul className="nav-menu">
@@ -24,6 +35,7 @@ function App() {
         </ul>
       </nav>
 
+      {/*Routes declaration*/}
       <Routes>
         <Route path="/posts" element={<Posts />} />
         <Route exact path="/posts/:id" element={<PostDetail />} />

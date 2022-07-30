@@ -5,6 +5,7 @@
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   }
   
+  /* NAVBAR */
   .NavbarItems {  
     background: linear-gradient(45deg, rgb(7, 199, 135), #62f7d6);
     border-bottom-color: black;
