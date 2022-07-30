@@ -22,6 +22,7 @@
     width: 490px;
     min-height: 200px;
     border-radius: 10px;
+    border: none;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   }
   
@@ -89,26 +90,21 @@
     align-self: center;
   }
   
-  /* CARD BACKGROUNDS */
-  
-  .card-1 {
-    background: radial-gradient(#76b2fe, #b69efe);
-  }
+  /* CARD BACKGROUND */
   
   .card-2 {
-    background: linear-gradient(45deg, #1ff5c0, #14daa8);;
+    background: #62f7d6;
   }
   
-  .card-3 {
-    background: radial-gradient(#76b2fe, #b69efe);
+  .photo {
+    height: 60px;
+    width: 60px;
+    padding-bottom: 10px;
   }
-  
-  .card-4 {
-    background: radial-gradient(#1fe4f5, #3fbafe);
-  }
-  
-  .card-5 {
-    background: radial-gradient(#f588d8, #c0a3e5);
+
+  .pdate {
+    font-size: 18px;
+    color: #212F3C;
   }
   
  

@@ -6,7 +6,7 @@ class Loading extends Component {
 
     render() {
         return (
-            <ReactLoading type="cylon" color="#45F6C3" height={'10%'} width={'10%'} className="Loader" />
+            <ReactLoading type="bars" color="#50E8DC " height={'10%'} width={'10%'} className="Loader" />
         );
 
     }

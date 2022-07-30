@@ -1,5 +1,4 @@
 import React, { Component, useState, useEffect } from 'react';
-import ReactFilterTable from "react-filter-and-pagination-table";
 import axios from 'axios';
 import { PostCard } from './PostCard';
 import './Posts.css'
@@ -14,7 +13,6 @@ function Posts() {
   const [paginate, setpaginate] = useState(8);
   const [selectedCategory, setSelectedCategory] = useState();
   const [categories, setCategories] = useState([]);
-
 
   useEffect(() => {
     axios(`/api/posts`)
@@ -49,7 +47,6 @@ function Posts() {
   }
 
   const showSelected = () => {
-
     return (
       <div className="mt-2">
         <div className="cat-text">Filter by Categories:</div>
@@ -68,35 +65,31 @@ function Posts() {
   }
 
   const showPosts = () => {
-    if (posts.length > 0 ) {
+    if (posts.length > 0) {
       if (!selectedCategory) {
         return posts.slice(0, paginate).map((post) => <PostCard data={post} />);
-      }else {
-      
-      return  posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).slice(0, paginate).map((post) => <PostCard data={post} />);
+      } else {
+        return posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).slice(0, paginate).map((post) => <PostCard data={post} />);
       }
-       
     } else {
-      
-      if(loading){
-        return( 
-        <Loading/>
+      if (loading) {
+        return (
+          <Loading />
         );
       }
       if (error) {
         return <p>{error}</p>;
       }
-
-      return <p>We encounter a problem retrieving data.</p>;
+      return <p>No data to show.</p>;
     };
   }
-
 
   return (
     <>
       {/* <h1 className="text-center mt-1 font-weight-bold font-italic">Posts</h1> */}
+      <h1 className="text-center mt-4 mb-3 font-weight-bold font-italic">You can reach the posts here ...</h1>
       <div className="text-center">
-        <div className="cards1">
+        <div className="mt-2 mb-4">
           {showSelected()}
         </div>
         <button className="btn btn-success" onClick={load_more}>Load More</button>
