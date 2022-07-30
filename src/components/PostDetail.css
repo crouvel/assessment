@@ -5,3 +5,13 @@
 .summary {
     width: 200px;
 }
+
+.details {
+    border-radius: 10px;
+    background: rgba(90, 240, 232, 0.685);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15px;
+}

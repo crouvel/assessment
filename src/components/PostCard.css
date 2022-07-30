@@ -107,4 +107,15 @@
     color: #212F3C;
   }
   
+  .sub{
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .sub1{
+
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background: white;
+  }
  
