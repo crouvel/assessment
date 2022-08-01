@@ -70,7 +70,7 @@ function Posts() {
 
   // Sets pagination value to load more content
   const load_more = (event) => {
-    setpaginate((prevValue) => prevValue + 8);
+    setpaginate((prevValue) => (prevValue + 8) );
   };
 
   // Changes the value of the selected category when filtering by category
@@ -136,7 +136,8 @@ function Posts() {
         </div>
         <button className="btn load mt-2" onClick={load_more}>Load More</button>
         {posts.length > 0 ?
-        <h4 className="mt-3"><b>{paginate} out of {selectedCategory? posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).length : posts.length }</b></h4> :
+        <h4 className="mt-3"><b>{selectedCategory ? (posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).length < paginate ? posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).length : paginate) : paginate } 
+         &nbsp;out of {selectedCategory? posts.filter((post) => post.categories.map((category) => category.name).includes(selectedCategory)).length : posts.length }</b></h4> :
         null}
       </div>
       <div className="cards">
