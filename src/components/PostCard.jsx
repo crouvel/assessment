@@ -14,7 +14,7 @@ import PostDetail from './PostDetail';
 
 const PostCard = (props) => {
   
-  // Constant that stores the props given by the parent component to display Post's information in each cards
+  // Constant that stores the props given by the parent component to display Post's information in each card
   const { data } = props
 
   // Renders the post card

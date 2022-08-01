@@ -18,7 +18,7 @@ import Loading from './Loading';
 
 function Posts() {
 
-  // Constants that stores all the local states of the component
+  // Constants that store all the local states of the component
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -41,7 +41,7 @@ function Posts() {
         setPosts(response.data.posts);
         response.data.posts.forEach(post => {
 
-          // Gets the categories for each posts from the fetched data and store it in the local constant categories
+          // Gets the categories for each post from the fetched data and stores it in the local constant categories
           post.categories.map(category => {
             if (!categories.includes(category.name)) {
               categories.push(category.name)
@@ -55,7 +55,7 @@ function Posts() {
       })
       .catch((error) => {
 
-        // Eventually catches the error and render it
+        // Eventually catches the error and renders it
         console.error("Error fetching data: ", error);
         setError(error);
 
@@ -68,12 +68,12 @@ function Posts() {
       });
   }, []);
 
-  // Set pagination value to load more content
+  // Sets pagination value to load more content
   const load_more = (event) => {
     setpaginate((prevValue) => prevValue + 8);
   };
 
-  // Change the value of the selected category when filtering b category
+  // Changes the value of the selected category when filtering by category
   function handleCategoryChange(event) {
     setSelectedCategory(event.target.value);
   }
@@ -97,7 +97,7 @@ function Posts() {
     );
   }
 
-  // Show all the posts in PostCards
+  // Show all the posts in the PostCards
   const showPosts = () => {
 
     // Check if the posts list is not null

@@ -38,7 +38,7 @@ function PostDetail() {
                 //get the data response
                 console.log(response.data.posts.filter(obj => {
                     
-                    // filters the fetched data to get the row corresponding to the id obtained in the route parameter
+                    // Filters the fetched data to get the row corresponding to the id obtained in the route parameter
                     return obj.id === id
                 }));
 
@@ -63,7 +63,7 @@ function PostDetail() {
     /* Function to render details of the Post */
     const showDetails = () => {
 
-        //Checks of the fetched data is not null
+        //Checks if the fetched data is not null
         if (row.length > 0) {
 
             //Renders the article that displays all the post's informations
@@ -100,7 +100,7 @@ function PostDetail() {
                 );
             }
 
-            //Checks is the error local state is not null
+            //Checks if the error local state is not null
             if (error) {
                 return <p>{error}</p>;
             }
